@@ -1,5 +1,30 @@
 {
-  "links": [],
+  "links": [
+    {
+      "from": "89b70777-ab22-45a1-8b7a-06c516265ae7",
+      "to": "fbe3722d-b5b4-4aee-8c9a-d98371f4f72b"
+    },
+    {
+      "from": "c756ceb6-d7b9-4eea-9708-080846208e2d",
+      "to": "7bd2eeed-3fe3-4cb3-af3c-9794ff278a97"
+    },
+    {
+      "from": "6b2e58b3-8229-4cd3-bfaa-893b1d19d9e1",
+      "to": "69327e7a-8e73-4a9e-ad62-7429b79b2dca"
+    },
+    {
+      "from": "b8eee3e6-2e5d-4569-bb7a-ba13706a79f4",
+      "to": "5e53e3f1-5777-4454-8d51-a33740f5f93d"
+    },
+    {
+      "from": "c600ecfd-ad65-4cfd-b6e7-4c08ed411777",
+      "to": "c8a470f9-9c65-4cfa-90ce-ae0c85174f90"
+    },
+    {
+      "from": "10b41980-2333-4694-94a5-354a613e1357",
+      "to": "bb27d4f0-3b12-43df-a37a-f0b974fde3cd"
+    }
+  ],
   "nodes": [
     {
       "name": "io_SelectFiles",
@@ -17,7 +42,7 @@
           "name": "base_directory",
           "output": false,
           "outputPort": false,
-          "value": "",
+          "value": "'/project/3015003.04/TutorialFam/SubjectData'",
           "visible": false,
           "iterator": false
         },
@@ -59,11 +84,50 @@
           "value": "",
           "visible": false,
           "iterator": false
+        },
+        {
+          "base": "subj_id",
+          "editable": true,
+          "id": "5de838a3-8a56-40bd-a0ce-e261257e3c04",
+          "input": true,
+          "inputPort": "86d07e2e-0c9e-4855-9337-59552bf4ef9c",
+          "name": "subj_id",
+          "output": false,
+          "outputPort": false,
+          "value": "['sub-001', 'sub-002']",
+          "visible": true,
+          "iterator": true
+        },
+        {
+          "base": "func",
+          "editable": true,
+          "id": "8009c21c-00fb-411c-935a-276b83aee6c2",
+          "input": true,
+          "inputPort": "2ef754d3-0285-41bc-ba66-f4c22e45f336",
+          "name": "func",
+          "output": true,
+          "outputPort": "c756ceb6-d7b9-4eea-9708-080846208e2d",
+          "value": "'{subj_id}/func/filtered_func_data_run*.nii'",
+          "visible": true,
+          "iterator": false
+        },
+        {
+          "base": "anat",
+          "editable": true,
+          "id": "b2f19245-043f-47be-bbbb-7ac2560bcb2d",
+          "input": true,
+          "inputPort": "8343f1e8-8798-4191-9a8a-260dcd4bcbd1",
+          "name": "anat",
+          "output": true,
+          "outputPort": "89b70777-ab22-45a1-8b7a-06c516265ae7",
+          "value": "'{subj_id}/anat/anat.nii'",
+          "visible": true,
+          "iterator": false
         }
       ],
       "position": [
-        -713.3637037927041,
-        -256.21105038846235
+        -652.0575514489541,
+        -256.5994170876811
       ],
       "code": [
         {
@@ -522,8 +586,8 @@
         }
       ],
       "position": [
-        -305.71025827088727,
-        -348.41119401983855
+        -274.58831002869977,
+        -353.1991884046042
       ],
       "code": [
         {
@@ -852,8 +916,8 @@
         }
       ],
       "position": [
-        -329.8674965356262,
-        64.27500618559814
+        -393.85159687742305,
+        34.92138374907471
       ],
       "code": [
         {
@@ -1572,8 +1636,8 @@
         }
       ],
       "position": [
-        68.07259576409018,
-        -155.55494534777944
+        65.67859857170737,
+        -64.58307492541616
       ],
       "code": [
         {
@@ -1609,7 +1673,7 @@
           "name": "base_directory",
           "output": false,
           "outputPort": false,
-          "value": "",
+          "value": "'/project/3015003.04/TutorialFam/Results'",
           "visible": false,
           "iterator": false
         },
@@ -1768,11 +1832,37 @@
           "value": "",
           "visible": true,
           "iterator": false
+        },
+        {
+          "base": "coregistered",
+          "editable": true,
+          "id": "3255ad3b-2221-4329-8202-ba0950f53412",
+          "input": true,
+          "inputPort": "c8a470f9-9c65-4cfa-90ce-ae0c85174f90",
+          "name": "coregistered",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": true,
+          "iterator": false
+        },
+        {
+          "base": "mc_files",
+          "editable": true,
+          "id": "c73804bd-9d69-4f46-8a03-0f34361e19f4",
+          "input": true,
+          "inputPort": "bb27d4f0-3b12-43df-a37a-f0b974fde3cd",
+          "name": "mc_files",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": true,
+          "iterator": false
         }
       ],
       "position": [
-        334.2631659885294,
-        63.660843008352444
+        362.99110177954503,
+        180.96665965874308
       ],
       "code": [
         {
